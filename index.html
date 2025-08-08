@@ -13,17 +13,31 @@
     .center {
       min-height: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       font-size: clamp(3rem, 8vw, 8rem);
       font-weight: 800;
-      color: #000000;
+      color: pink;
+    }
+    .baby {
+      margin-top: 20px;
+      width: 150px;
+      animation: crawl 4s infinite linear;
+    }
+    @keyframes crawl {
+      0% { transform: translateX(-100px); }
+      50% { transform: translateX(100px); }
+      100% { transform: translateX(-100px); }
     }
   </style>
 </head>
 <body>
-  <div class="center">Happy Birthday Liliana</div>
+  <div class="center">
+    Happy Birthday Liliana
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Baby_crawling_cartoon.png" alt="Crawling baby girl" class="baby" />
+  </div>
 </body>
 </html>
